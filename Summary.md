@@ -5,6 +5,8 @@ We will create a menu component. This will appear when the user right clicks on 
 
 We will work in an agile method. With each sprint we will divide our workload.
 
+[Presentaion](https://docs.google.com/presentation/d/1pNFaqYdmRU2e0ZBTHbG38zDH0bGFy2A7Tm3iLc-dnh4/edit#slide=id.g15c70b28cbd_0_19)
+
 ## User Stories:
 * As a student, I want to find a simpler solution to taking notes when I am assigned online readings so that I do not have to take notes on a separate document. 
 * As someone who loves to read books and articles online, I want to be able to annotate within the document so that I can reference back to my notes.
