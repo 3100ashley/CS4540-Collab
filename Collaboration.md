@@ -18,6 +18,30 @@ Discussed what extension ideas to create:
 * A Pomodoro Timer extension that can block other pages while studying 
 * To do list extension
 
+## Meeting 2: 10/20/22
+All team members attended the meeting.
+
+Project Management: [Jira](https://markmywords.atlassian.net/jira/software/projects/MARK/boards/2)
+
+All team members looked for inspiration to create the extension. 
+Extension Inspiration: 
+* [Medium Highlighter](https://medium.com/@mariusbongarts/how-to-build-the-medium-text-highlighter-as-a-chrome-extension-with-web-components-b3feccddcd01)
+* [Super Simple Highlighter](https://chrome.google.com/webstore/detail/super-simple-highlighter/hhlhjgianpocpoppaiihmlpgcoehlhio?hl=en)
+* [Highlight This](https://highlightthis.net/)
+
+Ashley followed the in class tutorial to start the extension. She is having trouble installing the web-ext to reload the files.
+
+Next steps:
+* create issues on jira
+   * Create wireframe (Ashley)
+   * Build Out technical report (everyone)
+   * Create menu when a user selects text (Jesse)
+   * Highlight text when user selects text (Alvent)
+   * Test menu and highlight text (Ashley)
+* Solve web-ext issue
+
+
+
 ## Future Meetings
 Future meetings will be held online or after class in the school library and we will be collaborating our work on Github. 
 Each team member is responsible for understanding the tech stack and asking for help when needed. 
