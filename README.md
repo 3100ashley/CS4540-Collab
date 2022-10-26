@@ -15,3 +15,5 @@
 * Push changes: git push origin <branchname>
   
   
+## Create zip file
+* zip -r mark_my_words.zip .
