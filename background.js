@@ -6,3 +6,4 @@ browser.browserAction.onClicked.addListener(async () => {
 
     browser.tabs.sendMessage(tabs[0].id, {action : "test"})
 })
+

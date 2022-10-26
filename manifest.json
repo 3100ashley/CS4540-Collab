@@ -12,10 +12,17 @@
         "scripts": ["background.js"]
     },
     "icons":{
-        "96": "mark_my_words_icon.png"
+        "96": "icons/mark_my_words_icon.png"
     },
+
+    "permissions": [
+        "activeTab"
+    ],
+
     "browser_action": {
-        "default_title": "Mark My Words"
+        "default_icon":"icons/mark_my_words_icon.png",
+        "default_title": "Mark My Words",
+        "default_popup": "popup/choose_list.html"
     }
 
 
