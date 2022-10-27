@@ -40,7 +40,9 @@ Next steps:
    * Test menu and highlight text (Ashley)
 * Solve web-ext issue
 
-
+## Meeting 3: 10/26/22
+Ashley and Alvent attended this meeting to practice working with github. Ashley worked on highlight feature as well as figma prototype and wireframe.
+* [Figma](https://www.figma.com/file/1IQ7R6N0NXDfp6PgEOyDH1/Mark-My-Words?node-id=0%3A1)
 
 ## Future Meetings
 Future meetings will be held online or after class in the school library and we will be collaborating our work on Github. 
