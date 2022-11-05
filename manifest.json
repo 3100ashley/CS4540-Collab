@@ -16,14 +16,13 @@
     },
 
     "permissions": [
-        "activeTab"
+        "currentWindow",
+        "active",
+        "tabs"
     ],
 
     "browser_action": {
         "default_icon":"icons/mark_my_words_icon.png",
-        "default_title": "Mark My Words",
-        "default_popup": "popup/choose_list.html"
+        "default_title": "Mark My Words"
     }
-
-
 }
