@@ -16,7 +16,9 @@
     },
 
     "permissions": [
-        "activeTab"
+        "activeTab", 
+        "menus",
+        "contextMenus"
     ],
 
     "browser_action": {
@@ -24,6 +26,8 @@
         "default_title": "Mark My Words",
         "default_popup": "popup/choose_list.html"
     }
+
+    
 
 
 }
