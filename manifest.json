@@ -16,6 +16,9 @@
     },
 
     "permissions": [
+        "activeTab", 
+        "menus",
+        "contextMenus",
         "currentWindow",
         "active",
         "tabs"
