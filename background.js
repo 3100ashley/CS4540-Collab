@@ -7,19 +7,6 @@ browser.browserAction.onClicked.addListener(async () => {
   browser.tabs.sendMessage(tabs[0].id, { action: "test" });
 });
 
-console.log("extension loaded!");
-
-
-
-
-
-browser.menus.onClicked.addListener((info, tab) => {
-  if(info.menuItemId === "save-text"){
-    console.log(info.selectionText);
-  }
-})
-
-
 const onCreated = () => {
   if(browser.runtime.lastError) {
     console.log("error creating item", browser.runtime.lastError);
@@ -29,8 +16,8 @@ const onCreated = () => {
 }
 
 browser.menus.create({
-  id: "save-text",
-  title: "Highlight Text",
+  id: "create-note",
+  title: "Create Note",
   contexts: ["selection"],
 }, onCreated);
 
