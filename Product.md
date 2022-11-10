@@ -4,7 +4,7 @@ During this phase we decided to build a menu system and give the ability for a u
 ###
 Before coding we wanted to specify how the extension will look and function and how users will see it. The first design we created was a high level overview of how the product would work.
 ###
-![First Image](images\image_1.JPG "image_1")
+![First Image](https://github.com/3100ashley/CS4540-Collab/blob/main/images/image_1.JPG "image_1")
 ###
 We wanted to go into more detail and recreated the design using an interface designer called Figma.
 ![Second Image](images\image_2.JPG "image_2")
