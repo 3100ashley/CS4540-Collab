@@ -44,6 +44,16 @@ Next steps:
 Ashley and Alvent attended this meeting to practice working with github. Ashley worked on highlight feature as well as figma prototype and wireframe.
 * [Figma](https://www.figma.com/file/1IQ7R6N0NXDfp6PgEOyDH1/Mark-My-Words?node-id=0%3A1)
 
+## Meeting 4: 11/09/22
+* Everyone finalized sections of code and pushed to main.
+* Need to edit technical report.
+* Need to edit presentation slides. 
+   * Speaking Points
+   - Highlevel on what was built out and the steps we took. (Ashley)
+   - Highlighting text on a web page. (Ashley)
+   - Marked Pages Icon that will open a new tab of marked URLS. This is a static page for now. (Alvent)
+   - Context menu options (Jesse)
+
 ## Future Meetings
 Future meetings will be held online or after class in the school library and we will be collaborating our work on Github. 
 Each team member is responsible for understanding the tech stack and asking for help when needed. 
