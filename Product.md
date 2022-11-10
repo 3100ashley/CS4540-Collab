@@ -14,7 +14,9 @@ We added a “Mark My Words”, web extension icon. Which will document all web 
 ![Fourth Image](https://github.com/3100ashley/CS4540-Collab/blob/main/images/image_4.JPG "image_4")
 ##
 This image depicts a user selecting a piece of text and the extension menu appearing. When a user highlights text on a web page the text will stay highlighted after it has been unselected with whichever color they choose in the options menu or it will default to the first option which is a bright yellow. The last menu option would allow the user to leave a collapsible note on the web page with their own message. The result would look like the image below.
+
 ![Fifth Image](https://github.com/3100ashley/CS4540-Collab/blob/main/images/image_5.JPG "image_5")
+
 ###
  In this phase we implemented the icon that opens a new tab and the marked pages will be shown. It lists the web pages the user has made highlights or notes. We also created a menu with different highlight colors and a button to create a note. This menu will appear when a user right clicks on a selected piece of text.  Lastly a user can highlight a selected text.
 ### Technical Highlights
