@@ -4,6 +4,7 @@
         let range = window.getSelection().getRangeAt(0);
         let newNode = document.createElement('span');
         newNode.style.backgroundColor = "rgb(250, 255, 176, .5)";
-        range.surroundContents(newNode)     
-        }  
+        range.surroundContents(newNode);
+        browser.runtime.sendMessage("Mark Page", (response) => {console.log(response)});
+        }
     })
