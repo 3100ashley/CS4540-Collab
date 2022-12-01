@@ -37,7 +37,7 @@ browser.menus.create({
 }, onCreated);
 
 browser.menus.create({
-  id: "green",
+  id: "rgb(122, 224, 101,.5)",
   type: "radio",
   title: "Green",
   contexts: ["all"],
@@ -45,7 +45,7 @@ browser.menus.create({
 }, onCreated)
 
 browser.menus.create({
-  id: "yellow",
+  id: "rgb(238, 255, 5,.5)",
   type: "radio",
   title: "Yellow",
   contexts: ["all"],
@@ -53,7 +53,7 @@ browser.menus.create({
 }, onCreated)
 
 browser.menus.create({
-  id: "blue",
+  id: "rgb(15, 197, 247,.5)",
   type: "radio",
   title: "Blue",
   contexts: ["all"],
@@ -61,7 +61,7 @@ browser.menus.create({
 }, onCreated)
 
 browser.menus.create({
-  id: "red",
+  id: "rgb(247, 15, 15,.5)",
   type: "radio",
   title: "Magenta",
   contexts: ["all"],
