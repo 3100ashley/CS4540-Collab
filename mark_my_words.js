@@ -5,6 +5,6 @@
         let newNode = document.createElement('span');
         newNode.style.backgroundColor = "rgb(250, 255, 176, .5)";
         range.surroundContents(newNode);
-        browser.runtime.sendMessage("Mark Page", (response) => {console.log(response)});
+        browser.runtime.sendMessage("Marked Page", (response) => {console.log(response)});
         }
     })
