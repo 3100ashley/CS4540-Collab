@@ -1,6 +1,12 @@
-browser.browserAction.onClicked.addListener(function() {
-  browser.tabs.create({url: browser.extension.getURL('markedPages.html')});
-});
+
+browser.browserAction.onClicked.addListener(() => {
+  browser.tabs.create({url: browser.extension.getURL('markedPages.html')})
+})
+
+
+// localStorage.setItem('myCat', 'Tom');
+// let test = localStorage.getItem('myCat')
+// console.log(test)
 
 //Possibly might use
 function mark() {
@@ -16,6 +22,7 @@ function mark() {
 }
 
 const onCreated = () => {
+  console.log(browser.menus.id)
   if(browser.runtime.lastError) {
     console.log("error creating item", browser.runtime.lastError);
   } else {
@@ -26,9 +33,8 @@ const onCreated = () => {
 browser.menus.create({
   id: "create-note",
   title: "Create Note",
-  contexts: ["selection"],
+  contexts: ["all"],
 }, onCreated);
-
 
 browser.menus.create({
   id: "green",
@@ -46,7 +52,6 @@ browser.menus.create({
   checked: false
 }, onCreated)
 
-
 browser.menus.create({
   id: "blue",
   type: "radio",
@@ -63,3 +68,18 @@ browser.menus.create({
   checked: false
 }, onCreated)
 
+if(window.getSelection().toString().length){
+  let range = window.getSelection().getRangeAt(0);
+  console.log(range)
+}
+
+browser.menus.onClicked.addListener((info, tab) => {
+  console.log(info);
+  browser.tabs.query({active: true, currentWindow: true}, function(tabs) {
+  browser.tabs.sendMessage(tabs[0].id, {color: info.menuItemId});
+});
+
+
+    
+
+});
