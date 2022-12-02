@@ -62,3 +62,10 @@ browser.menus.create({
   checked: false
 }, onCreated)
 
+browser.menus.onClicked.addListener((info, tab) => {
+  console.log(info);
+  browser.tabs.query({active: true, currentWindow: true}, function(tabs) {
+  browser.tabs.sendMessage(tabs[0].id, {color: info.menuItemId});
+  });
+});
+ 
