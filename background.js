@@ -1,19 +1,18 @@
 browser.browserAction.onClicked.addListener(function() {
   browser.tabs.create({url: browser.extension.getURL('markedPages.html')});
+  console.log(list);
+  browser.storage.sync.set({'URL' : list});
 });
 
-//Possibly might use
-function mark() {
-  browser.tabs.query({currentWindow: true, active: true}).then((tabs) => {
-      let list = [];
-      let tab = tabs[0];
-      if (list.includes(tabs[0])) {
-          list.push(tab);
-      }
-      document.body.innerHTML = tab.url;
-      console.log(tab.url);
-  }, console.error);
-}
+let list = [];
+browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  console.log(message);
+  let link = sender.url;
+  if(!list.includes(link)) {
+    list.push(link);
+  }
+  sendResponse("Marked");
+})
 
 const onCreated = () => {
   if(browser.runtime.lastError) {
