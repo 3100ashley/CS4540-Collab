@@ -3,10 +3,17 @@ function highlightText(color){
   if(window.getSelection().toString().length){
     let range = window.getSelection().getRangeAt(0);
     let newNode = document.createElement('span');
+    //add range to storage
+    console.log(range)
+    browser.storage.local.set({
+      ['range'] : {...range}
+    })
     newNode.style.backgroundColor = color;
     range.surroundContents(newNode)
     browser.runtime.sendMessage("Marked Page", (response) => {console.log(response)}); 
     } 
+
+   
  }
 
 browser.runtime.onMessage.addListener(

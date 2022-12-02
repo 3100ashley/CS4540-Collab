@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', restorePreferences); 
+
+//retrieving range
+async function restorePreferences() {
+  let localStorage = await browser.storage.local.get(['range']);
+  console.log(localStorage);
+}
+
 browser.browserAction.onClicked.addListener(function() {
   browser.tabs.create({url: browser.extension.getURL('markedPages.html')});
   console.log(list);
@@ -13,6 +21,7 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
   sendResponse("Marked");
 })
+
 
 const onCreated = () => {
   if(browser.runtime.lastError) {
@@ -62,6 +71,7 @@ browser.menus.create({
   checked: false
 }, onCreated)
 
+//send message when color is chose for highlight
 browser.menus.onClicked.addListener((info, tab) => {
   console.log(info);
   browser.tabs.query({active: true, currentWindow: true}, function(tabs) {
