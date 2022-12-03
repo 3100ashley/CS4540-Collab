@@ -12,8 +12,6 @@ function getSelectedNodePath(node) {
 //return node element given array of indices of tree
 //localStorage returns array as string and want to convert to array of numbers
 function findSelectedNode(path) {
-  //path = path.split(",").map((e) => Number(e));
-  console.log(path)
   return path.reduceRight(
     // traverse from root to node
     (parentElement, i) => parentElement.childNodes[i],
@@ -28,14 +26,15 @@ function setBackgroundHighlight(rangeItem, color) {
 }
 
 function createRangeNode() {
-  if (localStorage.getItem("highlightedTexts")) {
-    let highlightedTexts = JSON.parse(localStorage.getItem("highlightedTexts"));
-    highlightedTexts.forEach(obj => {
+  if (localStorage.getItem(window.location.href)) {
+    let highlightedTexts = JSON.parse(
+      localStorage.getItem(window.location.href)
+    );
+    highlightedTexts.forEach((obj) => {
       let range = document.createRange();
       range.setStart(findSelectedNode(obj.startNodePath),obj.startOffSet)
       range.setEnd(findSelectedNode(obj.endNodePath),obj.endOffSet)
       setBackgroundHighlight(range, obj.color)
-      ;
     });
   }
 }
@@ -43,7 +42,7 @@ function createRangeNode() {
 createRangeNode();
 
 //highlight text
-function highlightText(color) {
+function highlightText(color, url) {
   if (window.getSelection().toString().length) {
     let selection = window.getSelection();
     let range = selection.getRangeAt(0);
@@ -55,15 +54,15 @@ function highlightText(color) {
       endOffSet: range.endOffset,
       color: color,
     };
-
-    let highlightedTexts = JSON.parse(localStorage.getItem("highlightedTexts"));
-    if (highlightedTexts) {
+    let highlightedTexts;
+    if(localStorage.getItem(url)){
+      highlightedTexts=JSON.parse(localStorage.getItem(url));
       highlightedTexts.push(newHighlight);
-    } else {
+    }else {
       highlightedTexts = [newHighlight];
     }
 
-    localStorage.setItem("highlightedTexts", JSON.stringify(highlightedTexts));
+    localStorage.setItem(url, JSON.stringify(highlightedTexts));
     setBackgroundHighlight(range, color);
 
     browser.runtime.sendMessage("Marked Page", (response) => {
@@ -73,13 +72,14 @@ function highlightText(color) {
 }
 
 browser.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  console.log(
-    sender.tab
-      ? "from a content script:" + sender.tab.url
-      : "from the extension"
-  );
   if (request.color !== request.color) {
-    document.removeEventListener("mouseup", highlightText(request.color));
+    document.removeEventListener(
+      "mouseup",
+      highlightText(request.color, request.highlightedURL)
+    );
   }
-  document.addEventListener("mouseup", highlightText(request.color));
+  document.addEventListener(
+    "mouseup",
+    highlightText(request.color, request.highlightedURL)
+  );
 });

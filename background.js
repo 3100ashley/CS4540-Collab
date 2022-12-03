@@ -65,7 +65,6 @@ browser.menus.create({
 //send message when color is chose for highlight
 browser.menus.onClicked.addListener((info, tab) => {
   browser.tabs.query({active: true, currentWindow: true}, function(tabs) {
-  browser.tabs.sendMessage(tabs[0].id, {color: info.menuItemId});
+  browser.tabs.sendMessage(tabs[0].id, {color: info.menuItemId, highlightedURL: info.pageUrl});
   });
 });
- 
