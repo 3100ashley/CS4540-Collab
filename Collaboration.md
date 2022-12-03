@@ -10,7 +10,24 @@ Each member brings different skills and experiences to the team.
     * Worked in a crossfunction team to build a prototype application using React Native.
     * Built websites using Javascript, jQuery, and React.
 
+### Git Work Flow
 
+#### Retrieve most recent code
+* Make sure you are in the main branch: git checkout main 
+* On the main branch: git pull origin main 
+
+### Build a new feature
+* Create a new branch: git checkout -b < branchname >
+* Build out new code
+* View which files are not tracked: git status
+* Add the files you want to stage: git add <filename(s)> or git add . 
+* Capture snapshot: git commit -m <message>
+* Push changes: git push origin < branchname >
+  
+  
+## Create zip file
+* zip -r mark_my_words.zip .
+   
 ## Online Meeting 1: 09/20/22
 All team members attended the meeting.
 Discussed what extension ideas to create:
