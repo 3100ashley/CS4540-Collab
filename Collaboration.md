@@ -53,6 +53,24 @@ Ashley and Alvent attended this meeting to practice working with github. Ashley 
    - Highlighting text on a web page. (Ashley)
    - Marked Pages Icon that will open a new tab of marked URLS. This is a static page for now. (Alvent)
    - Context menu options (Jesse)
+ 
+## Meeting 5: 11/29/22
+* Assigned tasks
+   - Change highlightcolor when piece of text is selected. (Ashley)
+   - Save highlighted text after page reload. (Ashley)
+   - Save marked pages after page reload. (Alvent)
+   - Create a note pad for users to write on. (Jesse)
+   - Save notepad information. (Jesse)
+   
+## Meeting 6: 12/01/22
+* Alvent and Ashley discussed with Juhis about issues saving data to browser.
+* Alvent finalized and pushed code for added marked pages to an html page. 
+
+## Meeting 7: 12/02/22
+* Team met up to 
+   - decide what is another way to create a note section.
+   - try to help Ashley's issue with solving how to store the range object of a peice of text to storage.
+
 
 ## Future Meetings
 Future meetings will be held online or after class in the school library and we will be collaborating our work on Github. 
