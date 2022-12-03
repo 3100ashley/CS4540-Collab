@@ -1,6 +1,5 @@
 browser.browserAction.onClicked.addListener(function() {
   browser.tabs.create({url: browser.extension.getURL('markedPages.html')});
-  console.log(list);
   browser.storage.sync.set({'URL' : list});
 });
 
@@ -13,6 +12,7 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
   sendResponse("Marked");
 })
+
 
 const onCreated = () => {
   if(browser.runtime.lastError) {
@@ -30,7 +30,7 @@ browser.menus.create({
 
 
 browser.menus.create({
-  id: "green",
+  id: "rgb(44, 242, 44,.5)",
   type: "radio",
   title: "Green",
   contexts: ["all"],
@@ -38,7 +38,7 @@ browser.menus.create({
 }, onCreated)
 
 browser.menus.create({
-  id: "yellow",
+  id: "rgb(248, 255, 38,.5)",
   type: "radio",
   title: "Yellow",
   contexts: ["all"],
@@ -47,7 +47,7 @@ browser.menus.create({
 
 
 browser.menus.create({
-  id: "blue",
+  id: "rgb(33, 245, 252,.5)",
   type: "radio",
   title: "Blue",
   contexts: ["all"],
@@ -55,17 +55,16 @@ browser.menus.create({
 }, onCreated)
 
 browser.menus.create({
-  id: "red",
+  id: "rgb(255, 77, 243,.5)",
   type: "radio",
-  title: "Magenta",
+  title: "Pink",
   contexts: ["all"],
   checked: false
 }, onCreated)
 
+//send message when color is chose for highlight
 browser.menus.onClicked.addListener((info, tab) => {
-  console.log(info);
   browser.tabs.query({active: true, currentWindow: true}, function(tabs) {
-  browser.tabs.sendMessage(tabs[0].id, {color: info.menuItemId});
+  browser.tabs.sendMessage(tabs[0].id, {color: info.menuItemId, highlightedURL: info.pageUrl});
   });
 });
- 
