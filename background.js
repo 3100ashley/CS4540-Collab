@@ -23,12 +23,6 @@ const onCreated = () => {
   }
 }
 
-browser.menus.create({
-  id: "create-note",
-  title: "Create Note",
-  contexts: ["selection"],
-}, onCreated);
-
 
 browser.menus.create({
   id: "green",
