@@ -35,5 +35,19 @@
     "browser_action": {
         "default_icon":"icons/mark_my_words_icon.png",
         "default_title": "Mark My Words"
+    },
+
+    "sidebar_action": {
+        "default_icon":"icons/mark_my_words_icon.png",
+        "default_title": "Note Taker",
+        "default_panel": "noteSidebar.html"
+    },
+
+    "commands": {
+        "_execute_sidebar_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+Y"
+            }
+        }
     }
 }
